@@ -19,8 +19,8 @@ $$\min_{\omega} \frac{1}{2}\omega^{'}\Sigma\omega$$ $$s.t.$$ $$\begin{cases} \mu
 
 我们将每个资产对应的权重 $\omega_{i,t}$ 看做是每个资产对应‘’特征‘’和对应的投资记为一个函数形式： $$\omega_{i,t} = f(x_{i}, \theta)$$ ，这个‘’特征‘’ $\theta$ 也就是我们要基于用来做决策的因素, 我们将这个函数式的权重带入上边的最大化问题可得：
 $$\max_{\theta} \frac{1}{T} \sum_{t=0}^{T-1}u(r_{p,t+1}) \equiv \frac{1}{T}\sum_{t=0}^{T-1}u(\sum_{i=1}^{n_{t}}f(x_{i,t};\theta)r_{i,t+1})$$ .
-如果我们把 $f(x_{i}, \theta)$ 假设成一个线性关系(至少在我给的例子中)，其中 $\mathbf{\theta}$  是代表我们考虑因子的系数向量，即 $\theta = (\alpha, \beta)^{'}$ ，在栗子中，我们取一个市值因子 Market Capitalization(size)和一个动量因子m12(past 12 month average return)，其对应的系数分别为 $\alpha$ 和 $\beta$ 。现在这个线性方程可以表示为：
-$\omega_{i,t} = \bar{\omega}_{i,t} + \frac{1}{n_{t}}\theta^{'}\bar{x}_{i,t}$ ，
+如果我们把 $f(x_{i}, \theta)$ 假设成一个线性关系(至少在我给的例子中)，其中 $\mathbf{\theta}$  是代表我们考虑因子的系数向量，即 $\theta = (\alpha, \beta)^{'}$ ，在栗子中，我们取一个市值因子 Market Capitalization(size)和一个动量因子m12(past 12 month average return)，其对应的系数分别为 $\alpha$ 和 $\beta$ 。现在这个线性方程可以表示为：$
+$\omega_{i,t} = \bar{\omega}_{i,t}$ + $\frac{1}{n_{t}}\theta^{'}\bar{x}_{i,t}$
 其中， $\bar\omega_{i,t}$ 为某个资产 $i$  在时间 $t$ 时在一个benchmark portfolio的权重； 
 $\theta$ 为因子的估计量； 
 $\bar{x}_{i,t}$ 是截面标准化($standardized$ $cross-sectionally$)对应因子值。
