@@ -32,5 +32,5 @@ $\bar{x}\_{i,t}$ 是截面标准化($standardized$ $cross-sectionally$)对应因
 
 - Opt：根据我们风险偏好优化策略下的收益曲线
 - EW：所有股票相同权重下的收益曲线
-- top100: 掷投资前一百市值的同权重收益曲线
+- top100: 只投资前一百市值的同权重收益曲线
 ![image](https://github.com/Seaaann/Parametric-Portfolio-Policy/blob/main/Result.png)
