@@ -23,7 +23,6 @@ $$\max_{\theta} \frac{1}{T} \sum_{t=0}^{T-1}u(r_{p,t+1}) \equiv \frac{1}{T}\sum_
 $$\omega_{i,t} = \bar{\omega}_{i,t} + \frac{1}{n_{t}}\theta^{'}\bar{x}_{i,t}$$ ，
 其中， $\bar\omega_{i,t}$ 为某个资产 $i$  在时间 $t$ 时在一个benchmark portfolio的权重； 
 $\theta$ 为因子的估计量； 
-$\bar{x}_{i,t}$ 是截面标准化(standardized cross-sectionally)对应因子值。
-所以，这个问题转化成为：
-$$\max_{\theta} \frac{1}{T} \sum_{t=0}^{T-1}u(r_{p,t+1}) \equiv \frac{1}{T}\sum_{t=0}^{T-1}u(\sum_{i=1}^{n_{t}}(\bar{\omega}_{i,t} + \frac{1}{n_{t}}\theta^{'}\bar{x}_{i,t})r_{i,t+1})$$ ，
+$\bar{x}_{i,t}$ 是截面标准化($standardized$ $cross-sectionally$)对应因子值。
+所以，这个问题转化成为： $$\max_{\theta} \frac{1}{T} \sum_{t=0}^{T-1}u(r_{p,t+1}) \equiv \frac{1}{T}\sum_{t=0}^{T-1}u(\sum_{i=1}^{n_{t}}(\bar{\omega}_{i,t} + \frac{1}{n_{t}}\theta^{'}\bar{x}_{i,t})r_{i,t+1})$$ ，
 接下来我们就来实现这个问题，得出我们的 $\bar{\omega}_{i,t}$!
