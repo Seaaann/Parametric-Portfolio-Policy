@@ -12,7 +12,7 @@ $$r = \sum_{i=1}^{n}r_{i}\omega_{i} = z^{'}\omega$$  ,  $$\mu_{i} = \mathbf{E}(r
 $$\mu = \mathbf{E}(z) = (\mu_{1}, \mu_{2}, ..., \mu_{n})^{'}$$, $$Cov(z) = \mathbf{E}[(z-\mu)(z-\mu)^{'}] = \Sigma$$ ，我们通过一个二次规划问题来得到一个最佳投资组合：
 $$\min_{\omega} \frac{1}{2}\omega^{'}\Sigma\omega$$ \\ $$s.t.$$ $$\begin{cases} \mu^{'}\omega \geq \mu_{b}\\ \iota^{'}\omega = 1 \end{cases}$$  
 综上，我们的目标就是通过最小化投资组合的方差，同时满足投资组合的期望收益率大于 $\mu_{b}$  , 来得到我们的最优投资组合的权重向量 $\omega = (\omega_{1}, \omega_{2}, ..., \omega_{n})^{'}$。
-开始计算： $$L(\omega, \lambda, \theta) = \frac{1}{2}\omega^{'}\Sigma\omega - \lambda(\mu^{'}\omega - \mu_{b}) - \theta(\iota^{'}\omega - 1)$$ ， 我们对拉格朗日方程中的三个参数求偏导，可得我们权重向量： $$\bar{w} = \frac{\Sigma^{-1}\iota}{[\iota^{'}\Sigma^{-1}\iota]}$$。
+开始计算： $$L(\omega, \lambda, \theta) = \frac{1}{2}\omega^{'}\Sigma\omega - \lambda(\mu^{'}\omega - \mu_{b}) - \theta(\iota^{'}\omega - 1)$$ ， 我们对拉格朗日方程中的三个参数求偏导，可得我们权重向量： $$\bar{w} = \frac{\Sigma^{-1}\iota}{(\iota^{'}\Sigma^{-1}\iota)}$$。
 
 这次，我们假设投资者的目的是通过选择投资组合权重 $\omega_{i,t}$ 来最大化投资者预期收益(其实是条件预期收益) $r_{p, t+1}$ 的效用：
 $$\max_{\omega_{\{i,t\}^{n_{t}}_{i=1}}}\mathbf{E}[u(r_{p,t+1})] = \mathbf{E_{t}}[u(\sum_{i=1}^{n_{t}}\omega_{i,t}r_{p,t+1})]$$，
