@@ -15,7 +15,7 @@ $$\min_{\omega} \frac{1}{2}\omega^{'}\Sigma\omega$$ \\ $$s.t.$$ $$\begin{cases} 
 开始计算： $$L(\omega, \lambda, \theta) = \frac{1}{2}\omega^{'}\Sigma\omega - \lambda(\mu^{'}\omega - \mu_{b}) - \theta(\iota^{'}\omega - 1)$$ ， 我们对拉格朗日方程中的三个参数求偏导，可得我们权重向量： $$\bar{w} = \frac{\Sigma^{-1}\iota}{(\iota^{'}\Sigma^{-1}\iota)}$$。
 
 这次，我们假设投资者的目的是通过选择投资组合权重 $\omega_{i,t}$ 来最大化投资者预期收益(其实是条件预期收益) $r_{p, t+1}$ 的效用：
-$$\max_{\omega_{\{i,t\}^{n_{t}}_{i=1}}}\mathbf{E}u(r_{p,t+1}) = \mathbf{E_{t}}u(\sum_{i=1}^{n_{t}}\omega_{i,t}r_{p,t+1})$$，
+$\max_{\omega_{\{i,t\}^{n_{t}}_{i=1}}}\mathbf{E}u(r_{p,t+1}) = \mathbf{E_{t}}u(\sum_{i=1}^{n_{t}}\omega_{i,t}r_{p,t+1})$，
 我们将每个资产对应的权重 $\omega_{i,t}$ 看做是每个资产对应‘’特征‘’和对应的投资记为一个函数形式： $$\omega_{i,t} = f(x_{i}, \theta)$$ ，这个‘’特征‘’ $\theta$ 也就是我们要基于用来做决策的因素, 我们将这个函数式的权重带入上边的最大化问题可得：
 $$\max_{\theta} \frac{1}{T} \sum_{t=0}^{T-1}u(r_{p,t+1}) \equiv \frac{1}{T}\sum_{t=0}^{T-1}u(\sum_{i=1}^{n_{t}}f(x_{i,t};\theta)r_{i,t+1})$$ .
 如果我们把 $f(x_{i}, \theta)$ 假设成一个线性关系(至少在我给的例子中)，其中 $\mathbf{\theta}$  是代表我们考虑因子的系数向量，即 $\theta = (\alpha, \beta)^{'}$ ，在栗子中，我们取一个市值因子 Market Capitalization(size)和一个动量因子m12(past 12 month average return)，其对应的系数分别为 \alpha 和 \beta 。现在这个线性方程可以表示为：
