@@ -26,3 +26,11 @@ $\theta$ 为因子的估计量；
 $\bar{x}\_{i,t}$ 是截面标准化($standardized$ $cross-sectionally$)对应因子值。
 所以，这个问题转化成为： $$\max_{\theta} \frac{1}{T} \sum_{t=0}^{T-1}u(r_{p,t+1}) \equiv \frac{1}{T}\sum_{t=0}^{T-1}u(\sum_{i=1}^{n_{t}}(\bar{\omega}\_{i,t} + \frac{1}{n_{t}}\theta^{'}\bar{x}\_{i,t})r_{i,t+1})$$ ，
 接下来我们就来实现这个问题，得出我们的 $\bar{\omega}\_{i,t}$!
+
+- 两个因子的时序图：
+![image](https://github.com/Seaaann/Parametric-Portfolio-Policy/blob/main/Chars.png)
+
+- Opt：根据我们风险偏好优化策略下的收益曲线
+- EW：所有股票相同权重下的收益曲线
+- top100: 掷投资前一百市值的同权重收益曲线
+![image](https://github.com/Seaaann/Parametric-Portfolio-Policy/blob/main/Result.png)
