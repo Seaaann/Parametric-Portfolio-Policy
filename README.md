@@ -1,5 +1,5 @@
 # 参数化投资组合
-
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 #### Mean-Variance efficient portfolio
 这个理论很好理解，市场上的所有投资者都想：
